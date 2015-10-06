@@ -1,0 +1,26 @@
+<li class="list-group-item card">
+	<ul class="list-group card">
+	  <li class="list-group-item title-card">
+		<i ng-show="visible" class="icon ion-chevron-up size-24 float" ng-click="hideDetails()"></i>
+		<i ng-show="!visible" class="icon ion-chevron-down size-24 float" ng-click="showDetails()"></i>
+		<span ng-bind="model.Nombre"></span> 
+	  	<span ng-click="asignar()" class="float" ng-show="!visible"> ASSIGN</span>
+		<span ng-show="visible" ng-bind="model.Direccion"></span>
+		
+ 
+	  </li>
+	  <li class="list-group-item content-card">
+	  	<span ng-click="asignar()" class="float" ng-show="visible"> ASSIGN</span>
+
+		<i ng-show="visible" class="icon ion-ios-location size-24 info"></i>
+
+
+		<a data-tooltip="{{model.Telefono}}" ng-show="model.Telefono">
+			<i ng-show="visible" class="icon ion-ios-telephone size-24 info"></i>
+		</a>
+
+		<a class="myElement" title="That was easy!">
+		</a>
+	  </li>
+	</ul>
+</li>

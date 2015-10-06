@@ -1,0 +1,56 @@
+<div class="panel panel-default" st-table="displayedUsers" st-safe-src="usersCollection">
+  <div class="panel-heading">
+  	<span class="col-md-8">Search users</span>
+
+    <div class="input-group">
+		<input st-search="" class="form-control" placeholder="Users search" type="text"/>
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+                <i class="glyphicon glyphicon-search"></i>
+            </button>
+        </span>
+    </div>
+  </div>
+	<table class="table table-striped">
+		<thead>
+		<tr>
+			<th st-sort="Nombre">Name</th>
+			<th st-sort="Telefono">Phone</th>
+			<th st-sort="Domicilio">Adddress</th>
+			<th st-sort="FechaNacimiento">Birthdate</th>
+			<th st-sort="Email">Email</th>
+			<th st-sort="Ciudad">Location</th>
+			<th st-sort="Estado">City</th>
+			<th st-sort="Pais">Country</th>
+			<th st-sort="CP">Zip code</th>
+			<th st-sort="Compania">Company</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat="row in displayedUsers">
+			<td><span ng-bind="row.Nombre"></span></td>
+			<td><span ng-bind="row.Telefono"></span></td>
+			<td><span ng-bind="row.Domicilio"></span></td>
+			<td><span ng-bind="row.FechaNacimiento"></span></td>
+			<td><span ng-bind="row.Email"></span></td>
+			<td><span ng-bind="row.Ciudad"></span></td>
+			<td><span ng-bind="row.Estado"></span></td>
+			<td><span ng-bind="row.Pais"></span></td>
+			<td><span ng-bind="row.CP"></span></td>
+			<td><span ng-bind="row.Compania"></span></td>
+		</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="100" class="text-center">
+					<div st-items-by-page="10" st-pagination="" st-template="views/directives/page-select.html"></div>
+				</td>
+			</tr>
+		</tfoot>
+
+	</table>
+
+</div>
+
+
+

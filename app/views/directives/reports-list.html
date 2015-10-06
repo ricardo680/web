@@ -1,0 +1,33 @@
+
+<div class="panel panel-default">
+
+  <div class="panel-heading list-cards-title">
+    Reports
+    <span class="badge">{{noReports}}</span>
+  </div>
+
+  <div class="panel panel-default">
+    <input type="radio" id="radio-3" name="accordion-reports" checked="checked">
+    <label for="radio-3" class="panel-heading list-cards-subtitle">Reported ({{noReported}})</label>
+      <perfect-scrollbar id="reports-reported" class="scroller" wheel-propagation="true" wheel-speed="1" min-scrollbar-length="2">
+        <ul class="list-group ngsb-wrap">
+          <report-card ng-repeat="row in reports | filter: {Status: 1}" model="row">
+          </report-card>
+        </ul>
+      </perfect-scrollbar>
+    </div>
+
+  <div class="panel panel-default">
+    <input type="radio" id="radio-4" name="accordion-reports">
+    <label for="radio-4" class="panel-heading list-cards-subtitle">Assisted ({{noAssisted}})</label>
+      <perfect-scrollbar id="reports-assisted" class="scroller" wheel-propagation="true" wheel-speed="1" min-scrollbar-length="2">
+        <ul class="list-group ngsb-wrap">
+          <report-card ng-repeat="row in reports | filter: {Status: 2}" model="row">
+          </report-card>
+        </ul>
+      </perfect-scrollbar>
+    </div>
+
+
+</div>
+

@@ -1,0 +1,42 @@
+<div class="panel panel-default" st-table="displayedAdjusters" st-safe-src="adjustersCollection">
+  <div class="panel-heading">
+  	<span class="col-md-8">Search adjusters</span>
+
+    <div class="input-group">
+		<input st-search="" class="form-control" placeholder="Adjusters search" type="text"/>
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+                <i class="glyphicon glyphicon-search"></i>
+            </button>
+        </span>
+    </div>
+  </div>
+	<table class="table table-striped">
+		<thead>
+		<tr>
+			<th st-sort="Nombre">Name</th>
+			<th st-sort="Telefono">Phone</th>
+			<th st-sort="Email">Email</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat="row in displayedAdjusters">
+			<td><span ng-bind="row.Nombre"></span></td>
+			<td><span ng-bind="row.Telefono"></span></td>
+			<td><span ng-bind="row.Email"></span></td>
+		</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="100" class="text-center">
+					<div st-items-by-page="10" st-pagination="" st-template="views/directives/page-select.html"></div>
+				</td>
+			</tr>
+		</tfoot>
+
+	</table>
+
+</div>
+
+
+

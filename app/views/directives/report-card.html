@@ -1,0 +1,37 @@
+<li class="list-group-item card">
+	<ul class="list-group card">
+	  <li class="list-group-item title-card">
+	  	<div class="squared-image-container" ng-show="visible">
+	  		<img ng-src="{{model.FotoUsuario}}">	
+	  	</div>
+	  	
+		<i ng-show="visible" class="icon ion-chevron-up size-24 float" ng-click="hideDetails()"></i>
+		<i ng-show="!visible" class="icon ion-chevron-down size-24 float" ng-click="showDetails()"></i>
+		<span >P: {{modelo.NoPoliza}}</span> 
+	  	<span>C: ??????????</span> 
+	  	<span ng-click="asignar()" class="float" > ASSIGN</span>
+	  </li>
+	  <li class="list-group-item content-card">
+	  	<div class="thumbnail" ng-show="visible">
+      		<img ng-src="{{model.FotoSiniestro}}">
+      		<div class="iconsServices">
+				<i class="icon ion-medkit size-24 info"></i>
+				<img class="" src="images/icons/crane.svg" style="width:24px;">
+				<img class="" src="images/icons/justice.svg" style="width:24px;">
+      		</div>
+      		<div class="caption">
+      			<span ng-bind="model.Nombre"></span>
+				<address-report-card></address-report-card>
+        		<span>14:38 Hrs hace 3 Minutos ???</span>
+      		</div>
+    	</div>
+	  	<span ng-click="asignar()" class="float" ng-show="visible"> ASSIGN</span>
+		<i ng-show="visible" class="icon ion-ios-location size-24 info"></i>
+		<i ng-show="visible" class="icon ion-person size-24 info"></i>
+		<a data-tooltip="{{model.Telefono}}" ng-show="model.Telefono">
+			<i ng-show="visible" class="icon ion-ios-telephone size-24 info"></i>
+		</a>
+
+	  </li>
+	</ul>
+</li>

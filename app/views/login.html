@@ -1,0 +1,86 @@
+  <link rel="stylesheet" href="css/style.css">
+<style>
+
+
+body {
+  font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  color: #404040;
+  background: #0ca3d2;
+}
+
+.container {
+  margin: 180px auto;
+  width: 640px; 
+}
+
+#login{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-image: url(images/login.jpg)
+}
+.login {
+  position: relative;
+  margin: 0 auto;
+  padding: 0px 0px 20px 0px;
+  width: 310px;
+  background: white;
+  border-radius: 3px;
+}
+.login h1{
+  background-color: #2C2C2C;
+  text-align: center;
+  color:#fff;
+  padding: 10px;
+}
+
+
+
+
+input[type=text], input[type=password] {
+  border: 0;
+  position: relative;
+  width: 80%;
+  left: 10%;
+  margin-bottom: 10px;
+  height: 34px;
+  background: white;
+  border-bottom: 5px solid #c4c4c4;
+}
+
+
+.login-button {
+  background-color:transparent;
+  display:inline-block;
+  cursor:pointer;
+  color: #5C9EF1;;
+  font-family:Arial;
+  font-size:17px;
+  font-weight:bold;
+  padding:5px 10px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #150f6b;
+
+  position: relative;
+  width: 20%;
+  left: 40%;
+  text-align: -webkit-center;
+
+}
+
+</style>
+
+<section id="login">
+  <section class="container">
+    <div class="login">
+      <h1>Login</h1>
+        <p><input type="text" ng-model="user" placeholder="Email"></p>
+        <p><input type="password" ng-model="password" placeholder="Password"></p>
+        <p><a href="#" class="login-button">green</a></p>
+        {{$window.sessionStorage.length}}<br>
+        {{$window.sessionStorage}}
+        
+    </div>
+  </section>
+</section>
+

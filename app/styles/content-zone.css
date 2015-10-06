@@ -1,0 +1,59 @@
+users-table,
+adjusters-table,
+reports-table{
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-top: 15px;
+  left: 0px;
+  position: relative;
+}
+map-table{
+  padding: 0px !important;
+}
+
+
+adjusters-table input.col-ms-6
+reports-table input.col-ms-6{
+  position: absolute;
+  right: 15px;
+}
+
+adjusters-table .panel-heading,
+reports-table .panel-heading{
+   height: 55px;
+}
+
+
+
+                            /* SEARCH REPORTS*/
+
+.st-sort-ascent:before {
+    content: '\25B2';
+}
+
+.st-sort-descent:before {
+    content: '\25BC';
+}
+
+.lr-drop-target-before{
+  border-left: 2px solid orange;
+}
+
+.lr-drop-target-after{
+  border-right: 2px solid orange;
+}
+
+                      
+                            /* PAGINATION */
+.select-page {
+  width: 50px;
+  text-align: center;
+}
+.pagination {
+  float: right;
+}
+.pagination li a input {
+  padding: 0;
+  margin: -5px 0;
+}
+

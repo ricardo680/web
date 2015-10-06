@@ -1,0 +1,102 @@
+#wrapper {
+	/* width: 50px; */
+	padding-left: 50px;
+}
+
+
+navigation-menu{
+
+	overflow-y: visible;
+	width: auto;
+	height: 100%;
+	left: 50px;
+	margin-left: -50px;
+	position: fixed;
+	z-index: 1000;
+	background: #000 none repeat scroll 0% 0%;
+	transition: all 0.5s ease 0s;
+
+}
+
+.sidebar-nav {
+    top: 0px;
+    margin: 0px;
+    padding: 0px;
+    list-style: outside none none;
+	font-size:14px;
+	color:#ffffff;
+}
+
+#page-content-wrapper{
+    top: 0px;
+    margin: 0px;
+    width: 100%;
+    list-style: outside none none;
+}
+
+
+.sidebar-nav li.head{
+	padding:0px;
+}
+
+.sidebar-nav li{
+	list-style:none;
+	height:39px;
+	padding:10px;
+	width:50px;
+}
+
+.sidebar-nav span{
+	/* Container properties */
+	width:0;
+	left:38px;
+	padding:0;
+	position:absolute;
+	overflow:hidden;
+
+	/* Text properties */
+	font-family:'Myriad Pro',Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	letter-spacing:0.6px;
+	white-space:nowrap;
+	line-height:39px;
+
+	/* CSS3 Transition: */
+	-webkit-transition: 0.25s;
+
+	/* Future proofing (these do not work yet): */
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+.sidebar-nav a{
+	/* The background sprite: */
+
+	height:39px;
+	width:38px;
+	display:block;
+	position:relative;
+}
+
+/* General hover styles */
+
+.sidebar-nav a:hover span{ width:auto; padding:0 20px;overflow:visible; }
+.sidebar-nav a:hover{
+	text-decoration:none;
+
+	/* CSS outer glow with the box-shadow property */
+	-moz-box-shadow:0 0 5px #9ddff5;
+	-webkit-box-shadow:0 0 5px #9ddff5;
+	box-shadow:0 0 5px #9ddff5;
+}
+
+.sidebar-nav li a {	background-position:0 0;}
+.sidebar-nav li a:hover {	background-position:0 -39px;}
+.sidebar-nav li a span{
+    background-color: #818181;
+    color: #FFFFFF;
+}
+
+
+

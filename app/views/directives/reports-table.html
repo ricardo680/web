@@ -1,0 +1,85 @@
+<div class="panel panel-default" st-table="displayedReports" st-safe-src="reportsCollection">
+  <div class="panel-heading">
+  	<span class="col-md-8">Search reports</span>
+
+    <div class="input-group">
+		<input st-search="" class="form-control" placeholder="Report search" type="text"/>
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+                <i class="glyphicon glyphicon-search"></i>
+            </button>
+        </span>
+    </div>
+  </div>
+  <div class="panel-body col-md-12">
+    <p>
+    <div class="type col-md-4">
+    	<span class="title col-md-12">
+    		Type
+    	</span>
+		<faaaaaaaailter-type collection="rowCollection"></filter-type>
+    	<a ng-click="filterType('sinister')">
+    		Sinister ({{rt.noSinister}})
+    	</a>
+
+    	<a ng-click="filterType('theft')">
+    		Tefth ({{rt.noTefth}})
+    	</a>
+    </div>
+    <div class="status col-md-4">
+	    <span class="title col-md-12">
+	    	Status
+	    </span>
+    	Reported ({{rt.noReported}})
+    	Assisted ({{rt.noAssisted}})
+    	Closed ({{rt.noClosed}})
+    </div>
+    <div class="date col-md-4">
+    	<span class="title col-md-12">
+    		Dates
+    	</span>
+	    <input type="date">
+    	<input type="date">
+    	<input type="button" value="Filter">
+    </div>
+	</p>
+  </div>
+
+	<table class="table table-striped">
+		<thead>
+		<tr>
+			<th st-sort="NoPoliza">Policy</th>
+			<th st-sort="HoraSiniestro">Time</th>
+			<th st-sort="FechaSiniestro">Date</th>
+			<th st-sort="Tipo">Type</th>
+			<th st-sort="Nombre">Name</th>
+			<th>Pictures</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat="row in displayedReports">
+			<td><span ng-bind=row.NoPoliza></span></td>
+			<td><span ng-bind="row.HoraSiniestro"></span></td>
+			<td><span ng-bind="row.FechaSiniestro"></span></td>
+			<td><span ng-bind="row.Tipo"></span></td>
+			<td><span ng-bind="row.Nombre"></span></td>
+			<td>
+			<!-- http://lokeshdhakar.com/projects/lightbox2/#getting-started -->
+			<a rel="lightbox" ng-show="row.FotoSiniestro" href="{{row.FotoSiniestro}}">picture</a> 
+			</td>
+		</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="100" class="text-center">
+					<div st-items-by-page="10" st-pagination="" st-template="views/directives/page-select.html"></div>
+				</td>
+			</tr>
+		</tfoot>
+
+	</table>
+
+</div>
+
+
+

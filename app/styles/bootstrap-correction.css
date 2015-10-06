@@ -1,0 +1,21 @@
+						/* Correccion user agent stylesheet */
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+}
+
+.panel-heading {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.row.full{
+    /* margin-left: 0px; */
+    margin-right: 0px;
+}

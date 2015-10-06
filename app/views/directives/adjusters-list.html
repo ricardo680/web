@@ -1,0 +1,36 @@
+
+
+<div class="panel panel-default">
+
+  <div class="panel-heading list-cards-title">
+    Adjusters
+    <span class="badge">{{noAdjusters}}</span>
+  </div>
+  
+
+
+  <div class="panel panel-default">
+    <input type="radio" id="radio-1" name="accordion-adjusters" checked="checked">
+    <label for="radio-1" class="panel-heading list-cards-subtitle">Available ({{noAvailable}})</label>
+      <perfect-scrollbar id="adjusters-available" class="scroller" wheel-propagation="true" wheel-speed="1" min-scrollbar-length="2">
+        <ul class="list-group ngsb-wrap">
+          <adjuster-card ng-repeat="row in adjusters | filter: {Disponible: true}" model="row">
+          </adjuster-card>
+        </ul>
+      </perfect-scrollbar>
+    </div>
+
+
+  <div class="panel panel-default">
+    <input type="radio" id="radio-2" name="accordion-adjusters">
+    <label for="radio-2" class="panel-heading list-cards-subtitle">Busy ({{noBusy}})</label>
+      <perfect-scrollbar id="adjusters-busy" class="scroller" wheel-propagation="true" wheel-speed="1" min-scrollbar-length="2">
+        <ul class="list-group ngsb-wrap">
+          <adjuster-card ng-repeat="row in adjusters | filter: {Disponible: false}" model="row">
+          </adjuster-card>
+        </ul>
+      </perfect-scrollbar>
+    </div>
+
+
+</div>

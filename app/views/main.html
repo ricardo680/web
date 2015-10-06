@@ -1,0 +1,54 @@
+
+<map-table class="col-md-8" ng-controller="MainCtrl">
+  <div map-lazy-load="http://maps.google.com/maps/api/js" >
+    <map id="myMap" center="20.6979896,-103.3998797" zoom="12" 
+    style="height:740px;"
+
+    zoom-control="true"
+    zoom-control-options="{style:'LARGE', position:'TOP_LEFT'}"
+
+    street-view-control="false" 
+    map-type-control="false"
+    
+    styles="[{'featureType':'all','elementType':'all','stylers':[{'hue':'#ff0000'},{'saturation':-100},{'lightness':-30}]},{'featureType':'all','elementType':'labels.text.fill','stylers':[{'color':'#ffffff'}]},{'featureType':'all','elementType':'labels.text.stroke','stylers':[{'color':'#353535'}]},{'featureType':'landscape','elementType':'geometry','stylers':[{'color':'#656565'}]},{'featureType':'poi','elementType':'geometry.fill','stylers':[{'color':'#505050'}]},{'featureType':'poi','elementType':'geometry.stroke','stylers':[{'color':'#808080'}]},{'featureType':'road','elementType':'geometry','stylers':[{'color':'#454545'}]},{'featureType':'transit','elementType':'labels','stylers':[{'hue':'#000000'},{'saturation':100},{'lightness':-40},{'invert_lightness':true},{'gamma':1.5}]}]"
+
+
+    on-click="placeMarker()"
+
+>
+<!--
+      <marker position="20.6979896,-103.3998797" icon="images/icons/reported.svg"></marker>
+      <marker position="20.6079896,-103.2698797" icon="images/icons/assisted.svg"></marker>
+      <marker position="20.6579896,-103.2998797" icon="images/icons/available.svg"></marker>
+      <marker position="20.6279896,-103.3798797" icon="images/icons/busy.svg"></marker>
+      <marker position="20.5979896,-103.3298797" on-click="toggleBounce()" animation="DROP" draggable="true" icon="images/icons/available.svg"></marker>
+
+
+      <marker id="foo" position="20.5259896,-103.3788797" icon="images/icons/busy.svg" on-click="showInfoWindow(event, 'bar')"></marker>
+
+      <info-window id="bar" visible-on-marker="foo">
+        <div ng-non-bindable="">
+          <div id="siteNotice"></div>
+          <h1 id="firstHeading" class="firstHeading">Uluru</h1>
+          <div id="bodyContent">
+            <p>Attribution: Uluru,
+            <a href="//en.wikipedia.org/w/index.php?title=Uluru&amp;oldid=297882194">
+            http://en.wikipedia.org/w/index.php?title=Uluru</a> 
+            (last visited June 22, 2009).</p>
+          </div>
+        </div>
+
+      </info-window>
+-->
+
+
+    </map>
+  </div>
+</map-table>
+
+<adjusters-list class="col-md-2"></adjusters-list>
+<reports-list class="col-md-2"></reports-list>
+
+
+
+
